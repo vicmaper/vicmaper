@@ -1,0 +1,14 @@
+
+extends ../layout
+
+block content
+	h1.
+		LOGIN
+	form#formLogin(name="login", method="post", action="/personas/login")
+		p Nombre USUARIO:
+			input#inputUsuario(type="text", placeholder="Ejem. usuario", name="usuario", value="usuario")
+		p CONTRASEÑA:
+			input#inputPas(type="text", placeholder="Ejem. 134134",name="pas" value="pas")
+		p
+			button#btnEntrar(type="submit") Entrar
+			

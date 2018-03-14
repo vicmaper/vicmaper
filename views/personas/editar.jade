@@ -1,0 +1,20 @@
+
+extends ../layout
+
+block content
+	h1.
+		EDITAR PERSONA
+	form#formEditarPersona(name="editarPersona", method="post", action="/personas/editar")
+		p Nombre:
+			input#inputNombre(type="text", placeholder="Ejem. Nuevo Nombre", name="nombre", value="#{persona.nombre}")
+		p Apellido:
+			input#inputApellido(type="text", placeholder="Ejem. Nuevo Apellido",name="apellido" value="#{persona.apellido}")
+		p Telefono:
+			input#inputTelefono(type="text", placeholder="Ejem. Nuevo Numero", name="telefono", value="#{persona.telefono}")
+		p Email:
+			input#inputEmail(type="email", placeholder="Ejem. Nuevo correo", name="email", value="#{persona.email}")
+		p Fecha Nacimiento:
+			input#inputFecha(type="date", placeholder="Ejem. Nueva Fecha Nacimiento", name="fecha_nac", value="#{persona.fecha_nac}")
+		p
+			button#btnEditar(type="submit") Editar
+			

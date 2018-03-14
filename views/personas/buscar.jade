@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	form#formbuscarPersona(name="buscarPersona", method="post", action="/personas/buscar")
+		p Nombre:
+			input#inputNombre(type="text", placeholder="Ejem. Luis", name="nombre")
+		p
+			button#btnBuscar(type="submit") buscar
+

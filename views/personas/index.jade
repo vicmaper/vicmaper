@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	ul
+		- each persona in personas
+			li 
+				p
+					=persona.nombre
+				p
+					=persona.telefono
+				p
+					=persona.email
+				p
+					a(href="/personas/editar/#{persona.email}") Editar
+				p
+					a(href="/personas/eliminar/#{persona.email}") Eliminar	
+	form(action="/personas/buscar" method="post" ) 
+		input(type="text" name="buscar")
+		button(type="submit") Buscar
+
+	p
+		a(href="/personas/agregar") Agregar
+
+	p 
+		a(href="/personas/login") lOgin
